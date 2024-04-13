@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: add5af7611d34b579eacfb0fd30eabb3, type: 3}
+  m_Name: GameStateMachine
+  m_EditorClassIdentifier: 
+  _ClassBaseName: Game
+  _NameSpace: Project.StateMachines
+  _StartState: a2f9cb97-5d80-4d1a-8c1a-33343ff63e45
+  _AllowAnyState: 1
+  _InitializeOnAwake: 1
+  _States:
+  - _ID: a2f9cb97-5d80-4d1a-8c1a-33343ff63e45
+    _StateName: Init
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 430, y: 290}
+  - _ID: 7e7ca887-71e0-4b65-84f7-aca9d2374ceb
+    _StateName: MainMenu
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 700, y: 290}
+  - _ID: f14902c1-75e1-4152-bee4-89684b916d30
+    _StateName: Gameplay
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 975, y: 390}
+  - _ID: 87d4ac5d-7b6c-4dde-9601-b0b0536e9424
+    _StateName: Pause
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 1225, y: 290}
+  - _ID: 565f5845-0971-4f5a-a47f-56df1abb3a31
+    _StateName: InitGame
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 975, y: 290}
+  - _ID: d432fae9-7c4c-4999-a7e8-4b21e8305783
+    _StateName: GameOver
+    _FromAnyStateTransition: 0
+    _ToAnyStateTransition: 0
+    _Comments: 
+    _Position: {x: 1490, y: 290}
+  _Transitions:
+  - _FromState: a2f9cb97-5d80-4d1a-8c1a-33343ff63e45
+    _ToState: 7e7ca887-71e0-4b65-84f7-aca9d2374ceb
+    _Corners: []
+  - _FromState: 7e7ca887-71e0-4b65-84f7-aca9d2374ceb
+    _ToState: 565f5845-0971-4f5a-a47f-56df1abb3a31
+    _Corners: []
+  - _FromState: 565f5845-0971-4f5a-a47f-56df1abb3a31
+    _ToState: f14902c1-75e1-4152-bee4-89684b916d30
+    _Corners: []
+  - _FromState: f14902c1-75e1-4152-bee4-89684b916d30
+    _ToState: 87d4ac5d-7b6c-4dde-9601-b0b0536e9424
+    _Corners:
+    - {x: 1335, y: 420}
+  - _FromState: f14902c1-75e1-4152-bee4-89684b916d30
+    _ToState: d432fae9-7c4c-4999-a7e8-4b21e8305783
+    _Corners:
+    - {x: 1600, y: 420}
+  - _FromState: 87d4ac5d-7b6c-4dde-9601-b0b0536e9424
+    _ToState: 7e7ca887-71e0-4b65-84f7-aca9d2374ceb
+    _Corners:
+    - {x: 1335, y: 205}
+    - {x: 790, y: 205}
+  - _FromState: d432fae9-7c4c-4999-a7e8-4b21e8305783
+    _ToState: 7e7ca887-71e0-4b65-84f7-aca9d2374ceb
+    _Corners:
+    - {x: 1600, y: 205}
+    - {x: 790, y: 205}
